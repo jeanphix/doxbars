@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+
+
+var DoxBars = require('../lib/doxbars.js'),
+    argv = require('optimist')
+        .usage('$0 <javascript file> <handlebars template>')
+        .check(function(argv) {
+            if (!argv._.length) {
+                throw "you must specified the javascript file to extract.";
+            }        
+        })
+        .check(function(argv) {
+            if (argv._.length === 1) {
+                throw "you must specified the template file.";
+            }        
+        })
+        .check(function(argv) {
+            if (argv._.length > 2) {
+                throw "too many args.";
+            }        
+        })
+        .argv;
+
+(function init() {
+    var doxbar = new DoxBars(argv._[0]);
+    process.stdout.write(doxbar.render(argv._[1], argv));
+})();

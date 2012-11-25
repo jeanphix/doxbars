@@ -1,0 +1,10 @@
+{
+    "name": "doxbars",
+    "description": "Dox / Handlebars documentation generator.",
+    "version": "0.1.1",
+    "author": "jean-philippe serafin <serafinjp@gmail.com>",
+    "repository": { "type": "git", "url": "git@github.com:jeanphix/doxbars.git" },
+    "dependency": { "optimist": "*", "handlebars": "*", "dox": "*" },
+    "bin": "./bin/doxbars",
+    "keyworks": ["documentation", "dox", "handlebars", "jsdoc"]
+}
