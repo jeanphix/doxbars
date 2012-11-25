@@ -4,14 +4,12 @@ Doxbars
 Generates javascript api documentation.
 
 
-Usage
------
+Usage:
 
     $ doxbars <api_file> <handlebars_template> --title 'My awesome lib name!' > output.html
 
 
-Template sample
----------------
+Template:
 
     <!DOCTYPE html>
     <html>
